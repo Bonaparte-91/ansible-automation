@@ -1,0 +1,10 @@
+- name: Install nginx web server
+  hosts: group1
+  become: true
+  tasks:
+    - name: Ensure nginx is installed
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+

@@ -1,0 +1,13 @@
+- name: Copy and run a script
+  hosts: group1
+  become: true
+  tasks:
+    - name: Copy script
+      copy:
+        src: ../files/demo-script.sh
+        dest: /tmp/demo-script.sh
+        mode: '0755'
+
+    - name: Run script
+      command: /tmp/demo-script.sh
+

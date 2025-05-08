@@ -1,0 +1,10 @@
+- name: Create a user
+  hosts: group1
+  become: true
+  tasks: 
+    - name: Add Deploy user
+      user:
+        name: deploy
+        shell: /bin/bash
+        state: present 
+  

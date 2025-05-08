@@ -1,0 +1,10 @@
+- name: Manage nginx service
+  hosts: group1
+  become: true
+  tasks:
+    - name: Stop nginx
+      service:
+        name: nginx
+        state: stopped
+        enabled: true
+
